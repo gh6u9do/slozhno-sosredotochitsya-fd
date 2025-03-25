@@ -13,7 +13,6 @@
   --accent-hover-color: rgba(255, 0, 112, 0.4);
   --button-text-color: #ff0070;
 
-  
   /*                                  --- отступы ---  */
   --s-indent: 10px;
   --m-indent: 20px;
@@ -30,11 +29,10 @@
   --text-font-size: 18px;
 
   /*                                 --- картинки --- */
-  --background-image: url(../images/cover-image-dark.png)
-
+  --background-image: url(../images/cover-image-dark.png);
 }
 
-@media(width >= 768px) {
+@media (width >= 768px) {
   :root {
     --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }

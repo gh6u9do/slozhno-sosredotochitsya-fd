@@ -10,7 +10,6 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-
   /*                                  --- цвета --- */
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
@@ -35,20 +34,19 @@
 @media (prefers-color-scheme: light) {
   :root {
     /*                                  --- цвета --- */
-  --accent-color: #ff8dcb;
-  --title-color: #ffc2e6;
-  --section-header-color: #353430;
-  --article-text-color: #353430;
-  --article-header-color: #353430;
-  --accent-hover-color: rgba(50, 49, 45, 0.4);
-  --button-text-color: #353430;
+    --accent-color: #ff8dcb;
+    --title-color: #ffc2e6;
+    --section-header-color: #353430;
+    --article-text-color: #353430;
+    --article-header-color: #353430;
+    --accent-hover-color: rgba(50, 49, 45, 0.4);
+    --button-text-color: #353430;
 
-  /*                                  --- картинки --- */
-  --background-image: url(../images/cover-image-light.png);
+    /*                                  --- картинки --- */
+    --background-image: url(../images/cover-image-light.png);
   }
 
   .header__decor-title {
     display: none;
   }
-
 }

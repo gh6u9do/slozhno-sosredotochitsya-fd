@@ -20,8 +20,7 @@
   --button-text-color: #ff0070;
 
   /*                                 --- картинки --- */
-  --background-image: url(../images/cover-image-dark.png)
-
+  --background-image: url(../images/cover-image-dark.png);
 }
 
 .theme-dark .page {
@@ -33,7 +32,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-
   :root {
     /*                                  --- цвета --- */
     --accent-color: #ff0070;
@@ -43,9 +41,9 @@
     --article-header-color: #000028;
     --accent-hover-color: rgba(255, 0, 112, 0.4);
     --button-text-color: #ff0070;
-  
+
     /*                                 --- картинки --- */
-    --background-image: url(../images/cover-image-dark.png)
+    --background-image: url(../images/cover-image-dark.png);
   }
 
   .header__decor-title {
