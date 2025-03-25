@@ -2,4 +2,423 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--background-image);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-family: var(--main-font), sans-serif;
+}
+
+/*                                      ---- header ----                                */
+.header {
+  position: relative;
+
+  block-size: 100dvh;
+
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr;
+  justify-items: end;
+
+  padding: var(--s-indent);
+}
+
+.decorated-zone::before {
+  content: "";
+
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+
+  inset-block-start: var(--s-indent);
+  inset-inline-end: var(--s-indent);
+
+  border-block-start: 1px solid var(--button-text-color);
+  border-inline-end: 1px solid var(--button-text-color);
+}
+
+.decorated-zone::after {
+  content: "";
+
+  position: absolute;
+
+  inline-size: 25px;
+  block-size: 25px;
+
+  inset-block-end: var(--s-indent);
+  inset-inline-start: var(--s-indent);
+
+  border-block-end: 1px solid var(--button-text-color);
+  border-inline-start: 1px solid var(--button-text-color);
+}
+
+.header__decor-title {
+  position: absolute;
+  inset-block-start: var(--s-indent);
+  inset-inline-end: 38px;
+
+  text-transform: uppercase;
+  font-size: var(--text-font-size);
+  line-height: 139%;
+
+  color: var(--accent-color);
+}
+
+.header__decor-title::after {
+  content: "";
+
+  box-shadow: 0 0 4px 2px var(--accent-color);
+
+  inset-block-start: 8px;
+  inset-inline-end: -18px;
+
+  position: absolute;
+
+  block-size: 9px;
+  inline-size: 9px;
+
+  background-color: var(--accent-color);
+
+  border-radius: 50%;
+}
+
+.header__theme-menu {
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-indent);
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+
+  min-inline-size: 70px;
+  min-block-size: 26px;
+  padding: 0 13px;
+
+  text-transform: lowercase;
+
+  color: var(--button-text-color);
+
+  line-height: 100%;
+  font-size: var(--text-font-size);
+  text-align: center;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-hover-color);
+
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid currentColor;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid currentColor;
+
+  pointer-events: none;
+}
+
+.header__title {
+  width: 100%;
+
+  line-height: 83%;
+  font-size: var(--title-font-size);
+  font-weight: 700;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  font-weight: 700;
+  font-size: var(--text-font-size);
+  line-height: 130%;
+  color: var(--article-header-color);
+  background-color: var(--accent-color);
+}
+
+.header__description {
+  align-self: center;
+}
+
+/*                                  --- main ---                               */
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--xl-indent);
+
+  margin-block-start: 40px;
+
+  padding-inline-start: var(--s-indent);
+  padding-inline-end: var(--s-indent);
+}
+
+.section {
+  display: grid;
+
+  gap: var(--m-indent);
+}
+
+.section__articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--m-indent);
+}
+
+.section__header {
+  font-weight: 700;
+  font-size: var(--text-font-size);
+  line-height: 130%;
+  color: var(--section-header-color);
+}
+
+.section__header--filled {
+  background-color: var(--accent-color);
+}
+
+.section__subheader {
+  width: 100%;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-indent);
+}
+
+.article__header--light {
+  font-weight: 400;
+}
+
+.article__content {
+  font-weight: 400;
+  font-size: var(--text-font-size);
+  line-height: 130%;
+  color: var(--article-text-color);
+}
+
+.article__link {
+  text-decoration: none;
+
+  cursor: pointer;
+
+  text-shadow: 2px 2px 0 var(--accent-color);
+
+  border: 1px solid transparent;
+}
+
+.article__link:hover {
+  border-block-end-color: currentColor;
+}
+
+.article__link:focus {
+  outline: none;
+}
+
+.article__link:focus-visible {
+  border-color: currentColor;
+}
+
+.article__gallery {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-indent);
+}
+
+.gallery__image {
+  display: block;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/*                                        --- footer ---                                 */
+.footer {
+  position: relative;
+
+  margin-block-start: var(--l-indent);
+
+  block-size: 100dvh;
+
+  padding: var(--s-indent);
+
+  display: grid;
+  align-items: center;
+}
+
+.footer__title {
+  width: 100%;
+
+  text-align: center;
+
+  font-weight: 700;
+  font-size: var(--title-font-size);
+  line-height: 83%;
+  color: var(--title-color); 
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+
+
+/* ------ СТИЛИ ДЛЯ ПЛАНШЕТОВ ------- */
+@media (width >= 768px) {
+  /*                                            --- header --- */
+  .header {
+    padding: var(--m-indent);
+  }
+
+  .decorated-zone::before {
+    inset-block-start: var(--m-indent);
+    inset-inline-end: var(--m-indent);
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: var(--m-indent);
+    inset-block-end: var(--m-indent);
+  }
+
+  .header__decor-title {
+    inset-block-start: var(--m-indent);
+    inset-inline-end: 48px;
+  }
+
+  .header__title {
+    width: calc(100% + var(--m-indent));
+    font-size: var(--title-font-size);
+  }
+
+  .header__description {
+    max-width: 50%;
+  }
+
+  /*                                       --- main ---             */
+  .main {
+    margin-block-start: var(--xxl-indent);
+
+    padding-inline-start: var(--m-indent);
+    padding-inline-end: var(--m-indent);
+
+    gap: var(--xxxl-indent);
+  }
+
+  .main__text-section--horizontal {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .main__text-section--horizontal .section__header {
+    grid-column: 1;
+    grid-row: 1 / -1;
+
+    text-align: left;
+  }
+
+  .main__text-section--horizontal .section__articles {
+    grid-column: 2;
+  }
+
+  .main__text-section--vertical {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main__text-section--vertical  .section__header {
+    grid-column: 1/2;
+  }
+
+  .main__text-section--vertical .section__articles {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+
+  .main__gallery-section .article {
+    gap: var(--m-indent);
+  }
+  
+  .article__gallery {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: var(--m-indent);
+  }
+
+  .gallery__image--sunset {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+
+  .gallery__image--ice-cream {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .gallery__image--tape {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: span 2;
+  }
+
+  .gallery__image--books {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .gallery__image--street {
+    grid-column: span 2;
+  }
+/*                                              --- footer ---  */
+  .footer {
+    margin-block-start: var(--xxl-indent);
+
+    padding: var(--m-indent);
+  }
+
+  .footer__title {
+    font-size: var(--title-font-size);
+  }
+
+}
+
+
+/* СТИЛИ ДЛЯ НОУТБУКОВ */
+@media(width >= 1024px) {
+  /*                                       --- header --- */
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  /*                                        --- main --- */
+  .main__text-section--horizontal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main__text-section--horizontal .section__articles {
+    grid-column: 2/-1;
+  }
+
+  .main__text-section--vertical .section__articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main__text-section--vertical .article {
+    grid-template-rows: min-content 1fr;
+  }
 }

@@ -2,3 +2,40 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  /*                                  --- цвета --- */
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --section-header-color: #ff0070;
+  --article-text-color: #f1b2ce;
+  --article-header-color: #000028;
+  --accent-hover-color: rgba(255, 0, 112, 0.4);
+  --button-text-color: #ff0070;
+
+  
+  /*                                  --- отступы ---  */
+  --s-indent: 10px;
+  --m-indent: 20px;
+  --l-indent: 40px;
+  --xl-indent: 50px;
+  --xxl-indent: 60px;
+  --xxxl-indent: 80px;
+
+  /*                                  --- именование шрифтов --- */
+  --main-font: "IBM Plex Mono";
+
+  /*                                --- размеры шрифтов --- */
+  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --text-font-size: 18px;
+
+  /*                                 --- картинки --- */
+  --background-image: url(../images/cover-image-dark.png)
+
+}
+
+@media(width >= 768px) {
+  :root {
+    --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
