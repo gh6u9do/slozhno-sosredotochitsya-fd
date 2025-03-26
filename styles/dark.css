@@ -11,6 +11,7 @@
   */
 
   /*                                  --- цвета --- */
+  --background-color: #000028;
   --accent-color: #ff0070;
   --title-color: #db00ff;
   --section-header-color: #ff0070;
@@ -34,6 +35,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /*                                  --- цвета --- */
+    --background-color: #000028;
     --accent-color: #ff0070;
     --title-color: #db00ff;
     --section-header-color: #ff0070;

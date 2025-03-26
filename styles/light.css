@@ -11,6 +11,7 @@
   */
 
   /*                                  --- цвета --- */
+  --background-color: #fff1f7;
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
   --section-header-color: #353430;
@@ -34,6 +35,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     /*                                  --- цвета --- */
+    --background-color: #fff1f7;
     --accent-color: #ff8dcb;
     --title-color: #ffc2e6;
     --section-header-color: #353430;
