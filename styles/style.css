@@ -318,30 +318,33 @@
     gap: var(--xxxl-indent);
   }
 
-  .main__text-section--uneven {
+  .main__text-section--why,
+  .main__text-section--how{
     grid-template-columns: 1fr 2fr;
   }
 
-  .main__text-section--uneven .section__header {
+  .main__text-section--why .section__header,
+  .main__text-section--how .section__header{
     grid-column: 1;
     grid-row: 1 / -1;
 
     text-align: left;
   }
 
-  .main__text-section--uneven .section__articles {
+  .main__text-section--why .section__articles,
+  .main__text-section--how .section__articles {
     grid-column: 2;
   }
 
-  .main__text-section--even {
+  .main__text-section--what {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .main__text-section--even .section__header {
+  .main__text-section--what .section__header {
     grid-column: 1/2;
   }
 
-  .main__text-section--even .section__articles {
+  .main__text-section--what .section__articles {
     grid-row: 2;
     grid-column: 1 / -1;
   }
@@ -405,19 +408,21 @@
   }
 
   /*                                        --- main --- */
-  .main__text-section--uneven {
+  .main__text-section--why,
+  .main__text-section--how {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .main__text-section--uneven .section__articles {
+  .main__text-section--why .section__articles,
+  .main__text-section--how .section__articles{
     grid-column: 2/-1;
   }
 
-  .main__text-section--even .section__articles {
+  .main__text-section--what .section__articles {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .main__text-section--even .article {
+  .main__text-section--what .article {
     grid-template-rows: min-content 1fr;
   }
 }
