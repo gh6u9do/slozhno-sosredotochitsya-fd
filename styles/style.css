@@ -319,12 +319,12 @@
   }
 
   .main__text-section-why,
-  .main__text-section-how{
+  .main__text-section-how {
     grid-template-columns: 1fr 2fr;
   }
 
   .main__text-section-why .section__header,
-  .main__text-section-how .section__header{
+  .main__text-section-how .section__header {
     grid-column: 1;
     grid-row: 1 / -1;
 
@@ -414,7 +414,7 @@
   }
 
   .main__text-section-why .section__articles,
-  .main__text-section-how .section__articles{
+  .main__text-section-how .section__articles {
     grid-column: 2/-1;
   }
 
